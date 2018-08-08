@@ -167,8 +167,8 @@ module('Integration | Component | ember ace', function(hooks) {
     const { autocomplete } = this.component;
 
     await autocomplete.trigger();
-    assert.deepEqual(autocomplete.suggestions().mapBy('caption'), ['lhs', 'lhs2']);
-    assert.deepEqual(autocomplete.suggestions().mapBy('meta'), ['rhs', 'rhs2']);
+    assert.deepEqual(autocomplete.suggestions().mapBy('caption'), ['lhs2', 'lhs']);
+    assert.deepEqual(autocomplete.suggestions().mapBy('meta'), ['rhs2', 'rhs']);
     assert.deepEqual(autocomplete.suggestions().mapBy('selected'), [true, false]);
 
     assert.equal(autocomplete.focusedSuggestion.caption, 'lhs');
